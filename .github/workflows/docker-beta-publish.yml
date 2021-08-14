@@ -1,7 +1,7 @@
 name: Publish Docker image on Release
 on:
-  push:
-    branches: [ main ]  
+  release:
+    types: [published]
 jobs:
   push_to_registry:
     environment: dockerhub
