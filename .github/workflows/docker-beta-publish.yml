@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ez2raven/ubuntu-sc:${{ github.run_id }}, ez2raven/ubuntu-sc:latest
+          tags: ez2raven/ubuntu-sc:${{ github.event.release.tag_name }}, ez2raven/ubuntu-sc:latest
           labels: ${{ steps.docker_meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
