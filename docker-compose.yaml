@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  ubuntu-sc:
+    # image: ez2raven/ubuntu-sc:latest
+    image: ubuntu-sc
+    container_name: ubuntu-sc
+    environment:      
+      - TZ=Asia/Singapore
+      - LC_ALL=C.UTF-8
+      - LANG=C.UTF-8
+    restart: unless-stopped  
+    command: bash 
