@@ -15,5 +15,3 @@ iputils-ping \
 wireguard \
 dnsutils \
 && rm -rf /var/lib/apt/lists/*
-
-CMD ["/"]
