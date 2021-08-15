@@ -7,4 +7,6 @@ services:
       - TZ=Asia/Singapore
       - LC_ALL=C.UTF-8
       - LANG=C.UTF-8
-    restart: unless-stopped      
+    restart: unless-stopped
+    volumes:
+      - ./workspace:/workspace
