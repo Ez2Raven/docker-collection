@@ -1,7 +1,18 @@
-sudo docker-compose run ubuntu-vm bash
+A Ubuntu 20.04 image with the following packages installed for learning wireguard and coredns
 
-apt update && apt install -y iproute2 iputils-ping wireguard dnsutils
+* tzdata 
+* bash
+* curl
+* locales 
+* iproute2 
+* iputils-ping 
+* wireguard 
+* dnsutils 
 
-target=<container id or container name>
-docker run -it --net=container:$target --pid=container:$target \
---volumes-from=$target alpine sh
+To use this image, simply run start.sh
+
+A folder named "workspace" will be created and mounted in the docker container as "/workspace" 
+
+```bash
+/start.sh
+```
